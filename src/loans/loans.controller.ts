@@ -1,4 +1,13 @@
-import { Controller, Get, Delete, UseGuards, ForbiddenException } from "@nestjs/common"
+import { 
+  Controller, 
+  Get, 
+  Delete, 
+  UseGuards, 
+  ForbiddenException, 
+  Req, 
+  Param, 
+  Query 
+} from "@nestjs/common"
 import { AuthGuard } from "@nestjs/passport"
 import { LoansService } from "./loans.service"
 import { RolesGuard } from "../auth/guards/roles.guard"
@@ -12,9 +21,8 @@ export class LoansController {
   constructor(private readonly loansService: LoansService) {}
 
   @Get()
-  getAllLoans(req: any) {
+  getAllLoans(@Req() req: any, @Query("status") status?: LoanStatus) {
     const userRole = req.user?.role || UserRole.STAFF
-    const status = req.query?.status as LoanStatus
 
     if (status) {
       return this.loansService.getLoansByStatus(status, userRole)
@@ -24,13 +32,16 @@ export class LoansController {
   }
 
   @Get("expired")
-  getExpiredLoans(req: any) {
+  getExpiredLoans(@Req() req: any) {
     const userRole = req.user?.role || UserRole.STAFF
     return this.loansService.getExpiredLoans(userRole)
   }
 
   @Get(":userEmail/get")
-  getLoansByUserEmail(userEmail: string, req: any) {
+  getLoansByUserEmail(
+    @Param("userEmail") userEmail: string, 
+    @Req() req: any
+  ) {
     const userRole = req.user?.role || UserRole.STAFF
     return this.loansService.getLoansByUserEmail(userEmail, userRole)
   }
@@ -38,7 +49,10 @@ export class LoansController {
   @Delete(":loanId/delete")
   @UseGuards(RolesGuard)
   @Roles(UserRole.SUPERADMIN)
-  deleteLoan(loanId: string, req: any) {
+  deleteLoan(
+    @Param("loanId") loanId: string, 
+    @Req() req: any
+  ) {
     if (req.user?.role !== UserRole.SUPERADMIN) {
       throw new ForbiddenException("Only super admin can delete loans")
     }

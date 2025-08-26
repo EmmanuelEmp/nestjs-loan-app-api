@@ -73,3 +73,7 @@ src/
 - Input validation
 - Global exception handling
 - JWT token authentication
+
+## Author
+Ochogwu Emmanuel
+emmyochogwu@gmail.com
