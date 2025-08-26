@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "email": "admin@company.com",
+        "password": "$2b$10$8K1p/a0dRt.uMPWHS4PAqO6T3.bnTw/GjU4w.Ia11Qy6.M8zO8Zuy",
+        "role": "admin",
+        "name": "Admin User"
+    },
+    {
+        "id": "2",
+        "email": "superadmin@company.com",
+        "password": "$2b$10$8K1p/a0dRt.uMPWHS4PAqO6T3.bnTw/GjU4w.Ia11Qy6.M8zO8Zuy",
+        "role": "superadmin",
+        "name": "Super Admin"
+    },
+    {
+        "id": "3",
+        "email": "staff@company.com",
+        "password": "$2b$10$8K1p/a0dRt.uMPWHS4PAqO6T3.bnTw/GjU4w.Ia11Qy6.M8zO8Zuy",
+        "role": "staff",
+        "name": "Staff Member"
+    }
+]
