@@ -48,9 +48,9 @@ The code includes a proper `.eslintrc.js` file configured for NestJS. Make sure 
 - `DELETE /api/loan/:id/delete` - Delete loan (SuperAdmin only)
 
 ## Test Credentials
-- **Staff**: staff@company.com / password123
-- **Admin**: admin@company.com / password123
-- **SuperAdmin**: superadmin@company.com / password123
+- **Staff**: staff@company.com / password
+- **Admin**: admin@company.com / password
+- **SuperAdmin**: superadmin@company.com / password
 
 ## Code Quality Note
 
