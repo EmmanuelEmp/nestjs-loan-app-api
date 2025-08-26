@@ -1,10 +1,10 @@
 import { Controller, Get, Delete, UseGuards, ForbiddenException } from "@nestjs/common"
 import { AuthGuard } from "@nestjs/passport"
-import type { LoansService } from "./loans.service"
+import { LoansService } from "./loans.service"
 import { RolesGuard } from "../auth/guards/roles.guard"
 import { Roles } from "../auth/decorators/roles.decorator"
 import { UserRole } from "../common/enums/user-role.enum"
-import type { LoanStatus } from "../common/enums/loan-status.enum"
+import { LoanStatus } from "../common/enums/loan-status.enum"
 
 @Controller("loans")
 @UseGuards(AuthGuard("jwt"))

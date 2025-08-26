@@ -1,4 +1,4 @@
-import type { JwtService } from "@nestjs/jwt";
+import { JwtService } from "@nestjs/jwt";
 export declare class AuthService {
     private jwtService;
     private readonly users;

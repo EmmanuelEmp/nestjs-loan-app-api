@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoansController = void 0;
 const common_1 = require("@nestjs/common");
 const passport_1 = require("@nestjs/passport");
+const loans_service_1 = require("./loans.service");
 const roles_guard_1 = require("../auth/guards/roles.guard");
 const roles_decorator_1 = require("../auth/decorators/roles.decorator");
 const user_role_enum_1 = require("../common/enums/user-role.enum");
@@ -72,6 +73,6 @@ __decorate([
 exports.LoansController = LoansController = __decorate([
     (0, common_1.Controller)("loans"),
     (0, common_1.UseGuards)((0, passport_1.AuthGuard)("jwt")),
-    __metadata("design:paramtypes", [Function])
+    __metadata("design:paramtypes", [loans_service_1.LoansService])
 ], LoansController);
 //# sourceMappingURL=loans.controller.js.map

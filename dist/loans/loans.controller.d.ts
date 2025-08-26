@@ -1,4 +1,4 @@
-import type { LoansService } from "./loans.service";
+import { LoansService } from "./loans.service";
 export declare class LoansController {
     private readonly loansService;
     constructor(loansService: LoansService);

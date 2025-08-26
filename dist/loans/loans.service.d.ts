@@ -1,5 +1,5 @@
-import type { Loan, LoanForStaff } from "../common/interfaces/loan.interface";
-import type { LoanStatus } from "../common/enums/loan-status.enum";
+import { Loan, LoanForStaff } from "../common/interfaces/loan.interface";
+import { LoanStatus } from "../common/enums/loan-status.enum";
 import { UserRole } from "../common/enums/user-role.enum";
 export declare class LoansService {
     private readonly loans;

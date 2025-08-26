@@ -44,9 +44,9 @@ npm run start:prod
 
 ## Test Credentials
 
-- **Staff**: staff@company.com / password123
-- **Admin**: admin@company.com / password123
-- **SuperAdmin**: superadmin@company.com / password123
+- **Staff**: staff@company.com / password
+- **Admin**: admin@company.com / password
+- **SuperAdmin**: superadmin@company.com / password
 
 ## Role Permissions
 
